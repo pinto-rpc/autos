@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/autos', 'AutoController@index');
+Route::post('/autos', 'AutoController@store')->name('autos.store');
+Route::get('/autos/editar/{id}', 'AutoController@editView')->name('autos.editView');
+Route::post('/autos/{id}', 'AutoCrontroller@edit')->name('autos.edit');
+Route::delete('/autos/{id}', 'AutoController@destroy')->name('autos.destroy');
+
